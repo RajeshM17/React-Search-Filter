@@ -1,17 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import FormContainer from './containers/FormContainer ';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const styles = {
+  fontFamily: 'sans-serif',
+  textAlign: 'center',
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class App extends Component {
+  render() {
+    return (
+      <div className="col-md-6">
+        <h3> Sample Form Container </h3>
+        <FormContainer />
+      </div>
+    );
+  }
+}
+
+render(<App />, document.getElementById('root'));
